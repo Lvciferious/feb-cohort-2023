@@ -12,7 +12,7 @@ Define this function using function expression syntax.
 //non-tech: take a positve number and list all factors (when divided into the num, must return 0)
 //tech solution:
 //for loop x If condish OTP
-//multiply operation
+//multiply operation (ended up using mod instead)
 //must return array of factors
 //keep forgettinf .push()! lol
 
