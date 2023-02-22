@@ -12,8 +12,9 @@ If the array is empty, the function should return null.
 //pick the largest num out of a group of nums provided
 //tech solution:
 //for x if OTP
-//.push()
-//array that shit
+//.push() -not needed!
+//array that shit - NVM didn't need it!
+//ended up init a variable for null, so to get 'null' instead of 'undefined'
 
 // your code here
 
