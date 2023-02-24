@@ -92,7 +92,7 @@ Average of Four
 Write a function averageOfFour(num1, num2, num3, num4) that takes in four numbers.
 The function should return the average of all of the numbers.
 
-*/
+
 
 function averageOfFour(num1, num2, num3, num4) {
   const sum = num1 + num2 + num3 + num4;
@@ -112,7 +112,7 @@ Average of Two
 Write a function averageOfTwo(num1, num2) that returns the
 average of two numbers.
 
-*/
+
 
 function averageOfTwo(num1, num2) {
   let sum = num1 + num2;
@@ -129,4 +129,155 @@ averageOfTwo(2, 7.5); // 4.75
 console.log(averageOfTwo(3, 7)); // => 5
 console.log(averageOfTwo(16, 5)); // => 10.5
 console.log(averageOfTwo(2, 7.5)); // => 4.75
+
+
+function calculator(operation, num1, num2) {
+    if (operation === 'addition') return add(num1, num2);
+    if (operation === 'subtraction') return sub(num1, num2);
+    if (operation === 'multiplication') return multi(num1, num2);
+    if (operation === 'division') return div(num1, num2);
+    else return 'Invalid Operation';
+  }
+
+  function add(num1, num2) {
+   return num1 + num2;
+  }
+
+  function sub(num1, num2) {
+    return num1 - num2;
+   }
+
+   function multi(num1, num2) {
+    return num1 * num2;
+   }
+
+   function div(num1, num2) {
+    return num1 / num2;
+   }
+
+
+
+console.log(calculator('addition', 3, 9)); // 12
+console.log(calculator('division', 3, 9)); // .3333
+console.log(calculator('multiplication', 3, 9)); // 27
+console.log(calculator('subtraction', 3, 9)); // -6
+console.log(calculator('PIZZA', 3, 9)); // 'Invalid Operation'
+
+
+function additionMutation(number, n) {
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+
+  }
+}
 */
+
+
+/*
+Most Expensive Groceries
+This problem is worth 1 points.
+You may receive partial credit.
+You are compiling a price checker for a grocery store. The grocery prices are as follows:
+
+
+butter: $1, eggs: $2, milk: $3, bread: $4, cheese: $5
+
+
+First, create a function called costOfGroceries(groceries) which takes a single array of grocery items and returns the total cost.
+
+
+Then, write a function mostExpensiveGroceries(groceriesList) that takes in a 2-dimensional array of grocery items
+and returns the index of the sub-array with the highest cost.
+
+
+This problem is worth 7 points. It is possible to get partial points on this problem.
+*/
+
+//GAMEPLAN
+//non-tech solution:
+//add the total cost of several grocery lists. Then, among the total costs, select which is the most expensive.
+//tech solution:
+//for x if OTP that shit
+//2 func (1 is a helper func)
+//return total cost
+//return most expensive
+
+// butter: $1
+// eggs: $2
+// milk: $3
+// bread: $4
+// cheese: $5
+
+
+function costOfGroceries(groceries) {
+  let totalCost = 0;
+
+  for (let i = 0; i < groceries.length; i++) {
+    let foods = groceries[i];
+
+    if (foods === 'butter') {
+      totalCost += 1;
+    }
+    if (foods === 'eggs') {
+      totalCost += 2;
+    }
+    if (foods === 'milk') {
+      totalCost += 3;
+    }
+    if (foods === 'bread') {
+      totalCost += 4;
+    }
+    if (foods === 'cheese') {
+      totalCost += 5;
+    }
+  }
+  //console.log(totalCost);
+  return totalCost;
+}
+
+
+function mostExpensiveGroceries(groceriesList) {
+  highest = 0;
+  highestCost = 0;
+
+  for (let i = 0; i < groceriesList.length; i++) {
+    let currentList = groceriesList[i];
+    let listCost = costOfGroceries(currentList);
+
+    if (listCost > highest) {
+      highest = listCost;
+      highestCost = i;
+    }
+  }
+  console.log(highestCost);
+  return highestCost;
+}
+
+// TESTS
+// DO NOT MODIFY ANYTHING BELOW THIS LINE
+
+const groceriesA = ['cheese', 'butter', 'eggs'];
+const groceriesB = ['eggs', 'milk', 'bread', 'bread'];
+const groceriesC = ['cheese', 'bread'];
+const groceriesD = ['eggs', 'butter'];
+
+costOfGroceries(groceriesA);  // 8
+costOfGroceries(groceriesB);  // 13
+costOfGroceries(groceriesC);  // 9
+costOfGroceries(groceriesD);  // 3
+
+mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]);
+
+let score = 0;
+
+if (costOfGroceries(groceriesA) === 8) score++;
+if (costOfGroceries(groceriesB) === 13) score++;
+if (costOfGroceries(groceriesC) === 9) score++;
+if (costOfGroceries(groceriesD) === 3) score++;
+
+if (mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]) === 1) score++;
+if (mostExpensiveGroceries([groceriesA, groceriesD]) === 0) score++;
+if (mostExpensiveGroceries([groceriesA, groceriesD, groceriesC]) === 2) score++;
+
+
+console.log("You have scored " + score + "/7 points.");
