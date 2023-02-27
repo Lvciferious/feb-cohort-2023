@@ -17,23 +17,27 @@ If the array is empty, it should return null.
 // your code here
 
 
+
+//GAMEPLAN
+//tech solution:
+//array that shit
+//for x if OTP
+//addition, division operators
+//OOOH maybe helper func? or a nested loop?
+
+// your code here
+
+
 function avgVal(arr) {
+    if (arr.length === 0) return null;
+
     let sum = 0;
-
     for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-        let avg = sum / arr.length;
-        return avg;
+        let valSum = arr[i];
+        sum += valSum;
     }
-    return null;
-}
-
-
-
-
-
-
-
+    return sum / arr.length;
+};
 
 
 console.log(avgVal([5, 10])); // 7.5

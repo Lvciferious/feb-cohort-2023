@@ -207,44 +207,43 @@ This problem is worth 7 points. It is possible to get partial points on this pro
 // milk: $3
 // bread: $4
 // cheese: $5
-
+/*
 
 function costOfGroceries(groceries) {
   let totalCost = 0;
 
   for (let i = 0; i < groceries.length; i++) {
-    let foods = groceries[i];
+     let food = groceries[i];
 
-    if (foods === 'butter') {
-      totalCost += 1;
-    }
-    if (foods === 'eggs') {
+     if (food === 'butter') {
+        totalCost += 1;
+     }
+     if (food === 'eggs') {
       totalCost += 2;
-    }
-    if (foods === 'milk') {
+      }
+    if (food === 'milk') {
       totalCost += 3;
     }
-    if (foods === 'bread') {
-      totalCost += 4;
+    if (food === 'bread') {
+        totalCost += 4;
     }
-    if (foods === 'cheese') {
+    if (food === 'cheese') {
       totalCost += 5;
-    }
+   }
   }
-  //console.log(totalCost);
   return totalCost;
 }
 
 
 function mostExpensiveGroceries(groceriesList) {
-  highest = 0;
-  highestCost = 0;
+  let highest = 0;
+  let highestCost = 0;
 
   for (let i = 0; i < groceriesList.length; i++) {
     let currentList = groceriesList[i];
     let listCost = costOfGroceries(currentList);
 
-    if (listCost > highest) {
+    if(listCost > highest) {
       highest = listCost;
       highestCost = i;
     }
@@ -252,6 +251,7 @@ function mostExpensiveGroceries(groceriesList) {
   console.log(highestCost);
   return highestCost;
 }
+
 
 // TESTS
 // DO NOT MODIFY ANYTHING BELOW THIS LINE
@@ -278,6 +278,220 @@ if (costOfGroceries(groceriesD) === 3) score++;
 if (mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]) === 1) score++;
 if (mostExpensiveGroceries([groceriesA, groceriesD]) === 0) score++;
 if (mostExpensiveGroceries([groceriesA, groceriesD, groceriesC]) === 2) score++;
+
+
+console.log("You have scored " + score + "/7 points.");
+*/
+
+
+//function to take in single nums array and returns product
+//function to take in 2d array w/ highest product value
+// (values of all elements multiplied together)
+//use getProdut as helper func in 2d array func to solve
+//return highest product
+
+
+
+/*
+let totalProduct = [];
+
+function getProduct(nums) {
+  for (i = 0; i < nums.length; i++) {
+    let product = nums[i];
+    if (i === nums) return totalProduct
+  }
+    console.log(nums);
+}
+
+function highestProduct(numsList) {
+    // Your code here
+}
+*/
+
+/*
+function getProduct(nums) {
+    let total = 0;
+    for (let i = 0; i < nums.length; i++) {
+        const product = nums[i];
+        if(nums === i) {
+            total * nums
+        }
+    }
+    console.log(nums);
+        return total;
+
+}
+
+function highestProduct(numsList) {
+    let highest = -Infinity;
+    let highestIndex = 0;
+
+    for(let i = 0; i < numsList.length; i++) {
+        let numList = numsList[i];
+        let productList = getProduct(numList);
+        if (productList > highest) {
+            highest = productList;
+            highestIndex = i
+        }
+    }
+    console.log(highestIndex);
+    return highestIndex;
+}
+
+/*
+function mostExpensiveGroceries(groceriesList) {
+    let highest = -Infinity;
+    let highestIndex = 0;
+
+    for(let i = 0; i < groceriesList.length; i++) {
+        const groceryList = groceriesList[i];
+        const costOfList = costOfGroceries(groceryList);
+        if (costOfList > highest) {
+            highest = costOfList;
+            highestIndex = i
+        }
+    }
+    console.log(highestIndex);
+    return highestIndex;
+}
+
+
+
+// TESTS
+// DO NOT MODIFY ANYTHING BELOW THIS LINE
+
+const arrayA = [1, 2, 3, 4, 5];
+const arrayB = [3, 7];
+const arrayC = [20, 100, 1, 2];
+const arrayD = [1, 3, 2, 300];
+
+let score = 0;
+
+if (getProduct(arrayA) === 120) score++;
+if (getProduct(arrayB) === 21) score++;
+if (getProduct(arrayC) === 4000) score++;
+if (getProduct(arrayD) === 1800) score++;
+
+if (highestProduct([arrayA, arrayB, arrayC, arrayD]) === 2) score++;
+if (highestProduct([arrayA, arrayB]) === 0) score++;
+if (highestProduct([arrayA, arrayD]) === 1) score++;
+
+console.log("You have scored " + score + "/7 points.");
+/*
+
+
+
+I GET IS NOW!!
+
+Below are the arrays that we would nomally define in order to the start the process
+nums CONTAINS THE ARRAY being passed to the function
+Once we enter it into the console.log, nums becomes the ARGUMENT by which we pass the array into
+the function PARAMETER (groceries)
+This is where the FOR LOOP comes in! Once the arg is passed, we can start iterating
+through the array elements ('cheese', 'butter', 'eggs', etc.)!
+
+
+// TESTS
+// DO NOT MODIFY ANYTHING BELOW THIS LINE
+
+const arrayA = [1, 2, 3, 4, 5];
+const arrayB = [3, 7];
+const arrayC = [20, 100, 1, 2];
+const arrayD = [1, 3, 2, 300];
+
+let score = 0;
+
+if (getProduct(arrayA) === 120) score++;
+if (getProduct(arrayB) === 21) score++;
+if (getProduct(arrayC) === 4000) score++;
+if (getProduct(arrayD) === 1800) score++;
+
+if (highestProduct([arrayA, arrayB, arrayC, arrayD]) === 2) score++;
+if (highestProduct([arrayA, arrayB]) === 0) score++;
+if (highestProduct([arrayA, arrayD]) === 1) score++;
+
+console.log("You have scored " + score + "/7 points.");
+*/
+
+//function to take in single nums array and returns product
+//function to take in 2d array w/ highest product value
+// (values of all elements multiplied together)
+//use getProdut as helper func in 2d array func to solve
+//return highest product
+/*
+
+Highest Product
+This problem is worth 7 points.
+You may receive partial credit.
+ First, create a function called getProduct(nums) which takes a
+single array of numbers and returns the product.
+
+Then, write a function highestProduct(numsList) that takes in a 2-dimensional
+array of numbers and returns the index of the sub-array with
+the highest product value (the value of all of the elements multiplied
+together). Hint: You may use the getProduct function as a helper function in
+the highestProduct function to solve the problem.
+*/
+
+//GAMEPLAN
+//non-tech solution:
+//sum the numbers of several lists. Then return the product list with the highest number among them.
+//tech solution:
+//for x if OTP BOIIIIIII
+//helper func
+//two func total
+//return total products
+//return highest product
+
+function getProduct(nums) {
+  let product = 1;
+
+  for (let i = 0; i < nums.length; i++) {
+   let arr = nums[i];
+      product *= arr;
+  }
+  console.log(product);
+  return product;
+}
+
+function highestProduct(numsList) {
+  let highest = -Infinity;
+  let highProduct = 0;
+
+  for (let i = 0; i < numsList.length; i++) {
+    let currentList = numsList[i];
+    let productList = getProduct(currentList);
+
+    if(productList > highest) {
+      highest = productList;
+      highProduct = i;
+    }
+  }
+  //console.log(highProduct);
+  return highProduct;
+}
+
+
+
+
+// TESTS
+// DO NOT MODIFY ANYTHING BELOW THIS LINE
+
+const arrayA = [1, 2, 3, 4, 5]; // 120
+const arrayB = [3, 7]; // 21
+const arrayC = [20, 100, 1, 2]; // 4000
+const arrayD = [1, 3, 2, 300]; // 1800
+
+let score = 0;
+
+if (getProduct(arrayA) === 120) score++;
+if (getProduct(arrayB) === 21) score++;
+if (getProduct(arrayC) === 4000) score++;
+if (getProduct(arrayD) === 1800) score++;
+
+if (highestProduct([arrayA, arrayB, arrayC, arrayD]) === 2) score++;
+if (highestProduct([arrayA, arrayB]) === 0) score++;
+if (highestProduct([arrayA, arrayD]) === 1) score++;
 
 
 console.log("You have scored " + score + "/7 points.");

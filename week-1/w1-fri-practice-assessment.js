@@ -15,7 +15,7 @@ function isSorted(nums) {
 
         // Check if the current number is less than
         // the previous number
-        if (nums[i+1] < nums[i]) {
+        if (nums[i-1] < nums[i]) {
             // If it's not, return false
 
             return false;
@@ -29,9 +29,9 @@ function isSorted(nums) {
 
 }
 
-console.log(isSorted([1, 2, 3, 4, 5]))  // true
-console.log(isSorted([2, 2, 4, 4]))  // true
-console.log(isSorted([1, 2, 4, 3, 5, 6,]))  // false
+isSorted([1, 2, 3, 4, 5])  // true
+isSorted([2, 2, 4, 4])  // true
+isSorted([1, 2, 4, 3, 5, 6,])  // false
 */
 /*
 

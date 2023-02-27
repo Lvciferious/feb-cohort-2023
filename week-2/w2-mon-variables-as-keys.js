@@ -18,7 +18,8 @@ const str = "first";
 const variableAsKey = (obj, str) => {
 
     console.log(obj, str);
-    // Write your code here.
+    obj.first = "1";
+    obj.second = 2;
 }
 
 variableAsKey(obj, str);                // "1" (looks like 1 in terminal)
