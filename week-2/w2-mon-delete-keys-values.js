@@ -7,11 +7,12 @@ when printing the object.
 */
 
 
-const obj = {}
+const obj = {
+    first: "1"
+}
 
-
-console.log(obj);               // {}
-const obj = {}
-
+// Write your solution here.
+// Do deletion here
+delete obj.first
 
 console.log(obj);               // {}

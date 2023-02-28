@@ -16,7 +16,8 @@ const obj = {
 const str = "first";
 
 const variableAsKey = (obj, str) => {
-    // Write your code here.
+    console.log(obj[str]);
+    return obj[str];
 }
 
 variableAsKey(obj, str);                // "1" (looks like 1 in terminal)
