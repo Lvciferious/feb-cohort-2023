@@ -11,3 +11,7 @@ const obj = {}
 
 
 console.log(obj);               // {}
+const obj = {}
+
+
+console.log(obj);               // {}
