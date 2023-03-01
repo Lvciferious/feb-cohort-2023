@@ -23,7 +23,7 @@ function beautyAdd(str) {
 beautyAdd('Hello world'); //Hello beautiful world
 beautyAdd("It's "); //It's beautiful
 beautyAdd("A tiger"); //A beautiful tiger
-*/
+
 
 //multi-line fat arrow
 let sayHello = name => {
@@ -48,4 +48,12 @@ console.log(sayHello3('Lucifer'));
 
 /*
 
-for in gets 
+for in gets
+*/
+
+letNums = (...nums) => nums;
+
+
+console.log(1, 2, 3, 4, 5);
+console.log(57, 0, 1);
+console.log(9001);
