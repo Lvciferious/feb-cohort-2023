@@ -24,11 +24,12 @@ Look at the example test cases to see how this function is invoked:
 
 function sundaeOrder() {
   let sundae = "A bowl of ice cream with hot fudge";
-return function (topping) {
-  return sundae = sundae + " and" + topping
 
-}
+return function (topping) {
+   return sundae = sundae + " and " + topping;
+
 };
+}
 
 let sundae = sundaeOrder(); // => returns a function
 console.log(sundae("nuts")) // => "A bowl of ice cream with hot fudge and nuts"
